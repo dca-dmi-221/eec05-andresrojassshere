@@ -44,7 +44,6 @@ function wordSearcherIgnoreCase(targetWord, wordsList) {
 
 
 
-
 //PUNTO 3
 /*Dado un arreglo de strings, retornar la palabra más larga,
 la más corta y el tamaño promedio, el arreglo debe ser
@@ -78,8 +77,6 @@ let onVerificationWordB = "querer";
 let onVerificationWordC = "Gomosos";
 let onVerificationWordD = "Somos";
 
-const minuscula = onVerificationWordD.toLowerCase();
-
 function palindromeVerifier(word) {
    
    const wordReversed = word.split("").reverse().join("");
@@ -88,7 +85,7 @@ function palindromeVerifier(word) {
 console.log(palindromeVerifier(onVerificationWordA));
 console.log(palindromeVerifier(onVerificationWordB));
 console.log(palindromeVerifier(onVerificationWordC));
-console.log(palindromeVerifier(onVerificationWordD));
+console.log(palindromeVerifier(onVerificationWordD.toLowerCase()));
 
 
 
@@ -166,8 +163,13 @@ console.log(vocalsRemoverFromObject(testObjMultiContainer));
 let someWordsToTest = ["compañeros", "estudiantes", "señores", "amigos", "graduandos", "artistas", "universitarios"];
 
 function lastVocalReplacer(words) {
+
+
+
     // :)
+    
 }
+
 
 
 
