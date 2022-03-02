@@ -82,9 +82,9 @@ function palindromeVerifier(word) {
    const wordReversed = word.split("").reverse().join("");
    return  wordReversed === word ? "es palindromo" : "no es palindromo"
 }
-console.log(palindromeVerifier(onVerificationWordA));
-console.log(palindromeVerifier(onVerificationWordB));
-console.log(palindromeVerifier(onVerificationWordC));
+console.log(palindromeVerifier(onVerificationWordA.toLowerCase()));
+console.log(palindromeVerifier(onVerificationWordB.toLowerCase()));
+console.log(palindromeVerifier(onVerificationWordC.toLowerCase()));
 console.log(palindromeVerifier(onVerificationWordD.toLowerCase()));
 
 
