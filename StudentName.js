@@ -5,7 +5,7 @@
 
 let testWord = "esternocleidomastoideo";
 function wordCutter(word) {
-   
+    console.log(word.split(""));
 }
 wordCutter(testWord);
 
