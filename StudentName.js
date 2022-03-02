@@ -5,7 +5,9 @@
 
 let testWord = "esternocleidomastoideo";
 function wordCutter(word) {
-    console.log(word.split(""));
+    console.log(word.split("").sort(function(){
+        return Math.random() - 0.5
+    }));
 }
 wordCutter(testWord);
 
@@ -106,7 +108,7 @@ function lettersCounter(objectContainer) {
 
 
 
-//PUNTO 6
+//PUNTO 6 
 /*Dado 2 arreglos de strings retornar un arreglo con todos los strings.*/
 let wordArrayA = ["hola", "¿" ,"cómo", "estás", "?"];
 let wordArrayB = ["te", "ves" ,"igual", "te", "ves", "igual"];
@@ -114,7 +116,7 @@ let wordArrayB = ["te", "ves" ,"igual", "te", "ves", "igual"];
 function arrayJoiner(listA, listB) {
     listA = [wordArrayA]
     listB = [wordArrayB]
-    
+
     const array3 = wordArrayA.concat(wordArrayB);
     
     console.log(array3);
