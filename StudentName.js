@@ -112,8 +112,15 @@ let wordArrayA = ["hola", "¿" ,"cómo", "estás", "?"];
 let wordArrayB = ["te", "ves" ,"igual", "te", "ves", "igual"];
 
 function arrayJoiner(listA, listB) {
- // :)
+    listA = [wordArrayA]
+    listB = [wordArrayB]
+    
+    const array3 = wordArrayA.concat(wordArrayB);
+    
+    console.log(array3);
 }
+arrayJoiner(wordArrayA);
+arrayJoiner(wordArrayB);
 
 
 
