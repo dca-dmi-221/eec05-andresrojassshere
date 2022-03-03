@@ -5,7 +5,7 @@
 
 let testWord = "esternocleidomastoideo";
 function wordCutter(word) {
-    console.log(word.split("").sort(function(){
+    console.log(word.split("").sort(function () {
         return Math.random() - 0.5
     }));
 }
@@ -21,10 +21,10 @@ ahí contenido, debe soportar mayúsculas y minúsculas sin importar
 la variación, es lo mismo Carro, CARRO o carro.*/
 
 let testTargetWordA = "Sabrosura";
-let testTargetWordB = "Sazón";
+let testTargetWordB = "Sazon";
 let testTargetWordC = "Tempurado";
 let testWordsList = [
-    "Sabr0sura",
+    "SabrOsura",
     "Gozadera",
     "ritmo",
     "TEMPURADO",
@@ -32,15 +32,24 @@ let testWordsList = [
     "Chevere",
     "Meneo",
 ];
-
 // pruebe para cada palabra A, B y C
 function wordSearcherIgnoreCase(targetWord, wordsList) {
-   // :)
-
-
+    // :)
+    const myArray = Array.from(wordsList);
+    let resultados = myArray.filter((myArray) => {
+        return myArray.toUpperCase().startsWith(targetWord.toUpperCase());
+    });
+    console.log(resultados);
 
 }
-console.log(wordSearcherIgnoreCase(testTargetWordA.toLowerCase()));
+let targetA = wordSearcherIgnoreCase(testTargetWordA, testWordsList);
+console.log(targetA);
+
+let targetB = wordSearcherIgnoreCase(testTargetWordB, testWordsList);
+console.log(targetB);
+
+let targetC = wordSearcherIgnoreCase(testTargetWordC, testWordsList);
+console.log(targetC);
 
 
 
@@ -78,9 +87,9 @@ let onVerificationWordC = "Gomosos";
 let onVerificationWordD = "Somos";
 
 function palindromeVerifier(word) {
-   
-   const wordReversed = word.split("").reverse().join("");
-   return  wordReversed === word ? "es palindromo" : "no es palindromo"
+
+    const wordReversed = word.split("").reverse().join("");
+    return wordReversed === word ? "es palindromo" : "no es palindromo"
 }
 console.log(palindromeVerifier(onVerificationWordA.toLowerCase()));
 console.log(palindromeVerifier(onVerificationWordB.toLowerCase()));
@@ -95,13 +104,13 @@ console.log(palindromeVerifier(onVerificationWordD.toLowerCase()));
 /*Dado un objeto que contiene una lista de palabras contar el
 número de letras vocales y consonantes y retornarlo en un arreglo de 2 posiciones.*/
 let containerTestObject = {
-    list:["Cumbamba", "Oreja", "Nariz", "Ojo", "Lengua", "Diente"]
+    list: ["Cumbamba", "Oreja", "Nariz", "Ojo", "Lengua", "Diente"]
 }
 
 function consonantsCounter(objectContainer) {
     const count = objectContainer.match(/[bcdfghjklmnpqrstvwxyz]/gi).length;
     return 'numero de consonantes: ' + count;
-   
+
 }
 
 function vowelsCounter(objectContainer2) {
@@ -152,15 +161,15 @@ console.log(diente2);
 
 //PUNTO 6 
 /*Dado 2 arreglos de strings retornar un arreglo con todos los strings.*/
-let wordArrayA = ["hola", "¿" ,"cómo", "estás", "?"];
-let wordArrayB = ["te", "ves" ,"igual", "te", "ves", "igual"];
+let wordArrayA = ["hola", "¿", "cómo", "estás", "?"];
+let wordArrayB = ["te", "ves", "igual", "te", "ves", "igual"];
 
 function arrayJoiner(listA, listB) {
     listA = [wordArrayA]
     listB = [wordArrayB]
 
     const array3 = wordArrayA.concat(wordArrayB);
-    
+
     console.log(array3);
 }
 arrayJoiner(wordArrayA);
@@ -175,10 +184,10 @@ arrayJoiner(wordArrayB);
 son anagramas de una palabra base (recibida como parámetro), retorne las posiciones en un arreglo.*/
 
 let testWordToExplore = "amar";
-let wordsToVerify = ["amar", "arma", "rana" , "mara", "rama", "roma", "amor", "ramon", "omar"];
+let wordsToVerify = ["amar", "arma", "rana", "mara", "rama", "roma", "amor", "ramon", "omar"];
 
 function anagramVerifier(wordToExplore, listOfWords) {
-   // :)
+    // :)
 }
 
 
@@ -189,13 +198,13 @@ function anagramVerifier(wordToExplore, listOfWords) {
 arreglo que contiene las palabras sin vocales.*/
 
 let testObjMultiContainer = {
-    listA : ["piraña", "cachama", "tilapia", "trucha", "carpa", "salmón"],
-    listB : ["rinoceronte", "elefante", "jirafa", "tigre", "gacela", "ñú"]
+    listA: ["piraña", "cachama", "tilapia", "trucha", "carpa", "salmón"],
+    listB: ["rinoceronte", "elefante", "jirafa", "tigre", "gacela", "ñú"]
 };
 
 function vocalsRemoverFromObject(objectMultiContainer) {
     // :)
- 
+
 }
 
 console.log(vocalsRemoverFromObject(testObjMultiContainer));
@@ -213,7 +222,7 @@ function lastVocalReplacer(words) {
 
 
     // :)
-    
+
 }
 
 
@@ -227,7 +236,7 @@ versión al revés de alguna de las palabras de una segunda lista,
 debe contar las identificadas y retornar un objeto con ese conteo.*/
 
 
-let testListA = ["amor", "sabor", "calor","firma", "mara"];
+let testListA = ["amor", "sabor", "calor", "firma", "mara"];
 let testListB = ["roma", "robar", "portar", "arma", "mora"];
 
 function doubleListVerifier(listA, listB) {
