@@ -40,7 +40,7 @@ function wordSearcherIgnoreCase(targetWord, wordsList) {
 
 
 }
-
+console.log(wordSearcherIgnoreCase(testTargetWordA.toLowerCase()));
 
 
 
@@ -97,9 +97,54 @@ número de letras vocales y consonantes y retornarlo en un arreglo de 2 posicion
 let containerTestObject = {
     list:["Cumbamba", "Oreja", "Nariz", "Ojo", "Lengua", "Diente"]
 }
-function lettersCounter(objectContainer) {
-   // :)
+
+function consonantsCounter(objectContainer) {
+    const count = objectContainer.match(/[bcdfghjklmnpqrstvwxyz]/gi).length;
+    return 'numero de consonantes: ' + count;
+   
 }
+
+function vowelsCounter(objectContainer2) {
+    const count = objectContainer2.match(/[aeiou]/gi).length;
+    return 'numero de vocales: ' + count;
+}
+
+const cumbamba = "Cumbamba";
+const oreja = "Oreja";
+const nariz = "Nariz";
+const ojo = "Ojo";
+const lengua = "Lengua";
+const diente = "Diente";
+
+const cumbamba1 = consonantsCounter(cumbamba);
+const cumbamba2 = vowelsCounter(cumbamba);
+console.log(cumbamba1);
+console.log(cumbamba2);
+
+const oreja1 = consonantsCounter(oreja);
+const oreja2 = vowelsCounter(oreja);
+console.log(oreja1);
+console.log(oreja2);
+
+const nariz1 = consonantsCounter(nariz);
+const nariz2 = vowelsCounter(nariz);
+console.log(nariz1);
+console.log(nariz2);
+
+const ojo1 = consonantsCounter(ojo);
+const ojo2 = vowelsCounter(ojo);
+console.log(ojo1);
+console.log(ojo2);
+
+const lengua1 = consonantsCounter(lengua);
+const lengua2 = vowelsCounter(lengua);
+console.log(lengua1);
+console.log(lengua2);
+
+const diente1 = consonantsCounter(diente);
+const diente2 = vowelsCounter(diente);
+console.log(diente1);
+console.log(diente2);
 
 
 
@@ -150,6 +195,7 @@ let testObjMultiContainer = {
 
 function vocalsRemoverFromObject(objectMultiContainer) {
     // :)
+ 
 }
 
 console.log(vocalsRemoverFromObject(testObjMultiContainer));
